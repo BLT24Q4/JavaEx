@@ -143,16 +143,16 @@ public class ConditionalEx {
 		case 8:
 		case 10:
 		case 12: //	month == 1 OR month == 3 ...
-			System.out.println(month + "는 31일입니다.");
+			System.out.println(month + "월은 31일입니다.");
 			break;
 		case 2:
-			System.out.println(month + "는 28일입니다.");
+			System.out.println(month + "월은 28일입니다.");
 			break;
 		case 4:
 		case 6:
 		case 9:
 		case 11:
-			System.out.println(month + "는 30일입니다.");
+			System.out.println(month + "월은 30일입니다.");
 			break;
 		default:
 			System.out.println(month + "월이 어딨어?");
