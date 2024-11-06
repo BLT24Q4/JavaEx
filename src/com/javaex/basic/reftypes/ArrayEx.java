@@ -8,7 +8,8 @@ public class ArrayEx {
 //		usingArray();
 //		multiDimArrayEx();
 //		arrayCopyForEx();
-		arrayCopySystem();
+//		arrayCopySystem();
+		enhancedFor();
 	}
 
 	private static void usingArray() {
@@ -124,5 +125,21 @@ public class ArrayEx {
 		System.out.println("복사본:" +
 				Arrays.toString(target));
 		
+	}
+	
+	private static void enhancedFor() {
+		int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		//	일반적인 for문
+		for (int i = 0; i < nums.length; ++i) {
+			System.out.print(nums[i] + "\t");
+		}
+		System.out.println();
+		//	Enhanced For:
+		//	카운터 변수, 반복 조건, 증감식 신경쓰지 않고
+		//	손쉽게 컬렉션 데이터(배열 등)를 조작할 수 있음
+		for (int num: nums) {
+			System.out.print(num + "\t");
+		}
+		System.out.println();
 	}
 }
