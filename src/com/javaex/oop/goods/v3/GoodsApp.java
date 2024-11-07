@@ -63,8 +63,6 @@ public class GoodsApp {
 //		mug.setPrice(2_000);
 		Goods mug = new Goods("머그컵", 2_000);
 		mug.showInfo();
-		
-		
 	}
 
 }
