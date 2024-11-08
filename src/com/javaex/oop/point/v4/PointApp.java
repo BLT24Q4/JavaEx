@@ -91,6 +91,17 @@ class ColorPoint extends Point {
 																	y,
 																	color);
 	}
+	
+	@Override
+	public void draw(boolean bShow) {
+		String message = String.format(
+				"색상점[x=%d, y=%d, color=%s]을 ", x, y, color);
+		message += bShow ? "그렸습니다.": "지웠습니다.";
+		System.out.println(message);
+		
+		//	오버라이드 했지만 부모의 기능을 사용해야 할 때
+		super.draw(bShow);
+	}
 }
 
 public class PointApp {
