@@ -21,6 +21,10 @@ public class StaticExApp {
 		} catch (Exception e) {
 			
 		}
+		
+		//	static 클래스
+		System.out.println(Calc.PI);
+		System.out.println(Calc.getSum(1, 2, 3, 4, 5));
 	}
 
 }
