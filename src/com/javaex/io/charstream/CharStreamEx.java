@@ -45,6 +45,7 @@ public class CharStreamEx {
 				System.out.print((char)data);
 			}
 			
+			
 			System.out.println();
 		} catch (FileNotFoundException e) {
 			System.err.println("파일을 열 수 없습니다.");
