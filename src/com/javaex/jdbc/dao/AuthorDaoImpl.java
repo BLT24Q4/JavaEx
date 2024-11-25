@@ -109,8 +109,27 @@ public class AuthorDaoImpl implements AuthorDao {
 
 	@Override
 	public boolean delete(Long id) {
-		// TODO Auto-generated method stub
-		return false;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int deletedCount = 0;
+		
+		try {
+			conn = getConnection();
+			String sql = "DELETE FROM author " +
+					" WHERE author_id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setLong(1, id);
+			
+			deletedCount = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (conn != null) conn.close();
+			} catch (Exception e) {}
+		}
+		return 1 == deletedCount;
 	}
 
 }

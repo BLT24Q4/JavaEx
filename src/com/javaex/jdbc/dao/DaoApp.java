@@ -8,6 +8,9 @@ public class DaoApp {
 
 	public static void main(String[] args) {
 		listAuthors();
+//		insertAuthor();
+		deleteAuthor();
+		listAuthors();
 	}
 	
 	//	Author Table의 모든 레코드를 출력
@@ -45,4 +48,16 @@ public class DaoApp {
 		scanner.close();
 	}
 
+	private static void deleteAuthor() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("삭제할 저자 ID:");
+		Long authorId = scanner.nextLong();
+		
+		AuthorDao dao = new AuthorDaoImpl();
+		boolean success = dao.delete(authorId);
+		
+		System.out.println("AUTHOR DELETE " +
+				(success ? "성공": "실패"));
+		scanner.close();
+	}
 }
