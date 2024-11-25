@@ -62,13 +62,13 @@ public class AuthorDaoImpl implements AuthorDao {
 
 	@Override
 	public List<AuthorVo> search(String keyword) {
-		// TODO Auto-generated method stub
+		// TODO 검색어를 입력받아 author_name 필드를 LIKE 검색하여 목록을 돌려주는 메서드 구현
 		return null;
 	}
 
 	@Override
 	public AuthorVo get(Long id) {
-		// TODO Auto-generated method stub
+		// TODO PK 정보를 입력받아 해당 PK를 가진 레코드를 반환하는 메서드
 		return null;
 	}
 
@@ -103,7 +103,7 @@ public class AuthorDaoImpl implements AuthorDao {
 
 	@Override
 	public boolean update(AuthorVo vo) {
-		// TODO Auto-generated method stub
+		// TODO AuthorVO를 매개변수로 입력받아 업데이트 하는 메서드
 		return false;
 	}
 
