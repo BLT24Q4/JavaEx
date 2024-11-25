@@ -42,8 +42,10 @@ public class SelectTest {
 			}
 		} catch (ClassNotFoundException e) {
 			System.err.println("드라이버를 찾지 못했습니다!");
+			e.printStackTrace();
 		} catch (SQLException e) {
 			System.err.println("SQLError!");
+			e.printStackTrace();
 		} finally {
 			try {
 				if (conn != null) conn.close();
