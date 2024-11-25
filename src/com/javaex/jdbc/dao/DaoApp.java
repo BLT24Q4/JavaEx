@@ -22,6 +22,7 @@ public class DaoApp {
 			AuthorVo vo = iter.next();
 			System.out.println(vo);
 		}
+		System.out.println("===================");
 	}
 
 }
