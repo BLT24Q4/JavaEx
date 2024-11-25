@@ -2,6 +2,7 @@ package com.javaex.jdbc.dao;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class DaoApp {
 
@@ -22,7 +23,26 @@ public class DaoApp {
 			AuthorVo vo = iter.next();
 			System.out.println(vo);
 		}
+		
 		System.out.println("===================");
+	}
+	
+	//	스캐너에서 정보 입력 받아 테이블에 넣는 로직
+	private static void insertAuthor() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("이름:");
+		String name = scanner.nextLine();
+		System.out.print("정보:");
+		String desc = scanner.nextLine();
+		
+		AuthorVo vo = new AuthorVo(name, desc);
+		
+		AuthorDao dao = new AuthorDaoImpl();
+		boolean success = dao.insert(vo);
+		
+		System.out.println("Author INSERT " + 
+					(success ? "성공": "실패"));
+		scanner.close();
 	}
 
 }
